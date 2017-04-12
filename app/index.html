@@ -16,9 +16,11 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/uikit.min.css">
     <!-- endbuild -->
     <!--fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--end of fonts -->
     
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -36,15 +38,43 @@
           <a href="#">skills</a>
           <a href="#">portfolio</a>
           <a href="#">contact</a>
-        </nav>
-      <div id="sec01">
+        </nav>  
+        <div id="sec01">
        <div class="scroll-down-btn">
         <a href="#about"><div class="arrow"></div></a>
        </div>
      </div>
     </header>
+
     <section class="about" id="about">
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem a excepturi numquam asperiores. Laboriosam officiis magnam, itaque excepturi error ea tempora inventore rem natus, necessitatibus quo iste harum tenetur architecto quis, dolore officia eos impedit sit vel dolor quibusdam repellat aut assumenda! Alias odio numquam asperiores nisi sed consequuntur, eos.</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At amet aspernatur, laboriosam aliquam et cupiditate ut eaque quos! Quasi possimus odit accusantium, sunt nobis, deleniti labore voluptatibus. Neque facilis, recusandae suscipit magni voluptatum nihil architecto in optio laboriosam quo veniam quia quaerat, ad enim ipsum asperiores eos dolor alias reiciendis minima commodi, obcaecati quae. Quas soluta et accusantium veritatis ullam possimus aperiam molestiae labore deserunt doloremque, rerum accusamus tenetur placeat doloribus consectetur deleniti cupiditate fuga, delectus vitae excepturi eligendi temporibus architecto? Praesentium assumenda, beatae, voluptate a rerum, consectetur cumque quisquam amet placeat obcaecati animi corporis fugit tempore natus nobis commodi neque unde numquam temporibus provident ab ea ratione architecto. Corporis neque minus autem officia dicta, quidem cum eum aliquam rem sapiente quo nemo obcaecati harum illo magni. Blanditiis voluptates praesentium, est commodi delectus ratione quasi sequi excepturi deserunt molestiae porro illo ad velit quidem expedita nam eveniet obcaecati eius, ea, rem voluptatem similique pariatur maxime cupiditate. Debitis voluptas corporis eius, magni consectetur dolor nobis accusamus iure voluptatibus necessitatibus, aut modi provident non labore aperiam eveniet nemo laborum. Odio quam delectus, obcaecati corrupti, illum voluptate quidem culpa aspernatur alias est iste dolores esse. Magnam mollitia consequatur, adipisci temporibus nobis harum. Voluptate!</div>
+    </section>
+    <section class="contact">
+    <section class="work">
+      <!-- Filter Controls -->
+      <ul id="my-id" class="uk-subnav">
+          <li data-uk-filter=""><a href=""></a></li>
+          <li data-uk-filter="filter-a"><a href=""></a></li>
+          <li data-uk-filter="filter-b"><a href=""></a></li>
+      </ul>
+
+      <!-- Dynamic Grid -->
+      <div data-uk-grid="{controls: '#my-id'}">
+          <div data-uk-filter="filter-a">...</div>
+          <div data-uk-filter="filter-b">...</div>
+          <div data-uk-filter="filter-a,filter-b">...</div>
+      </div>
+    </section>
+    <div class="social">
+      <ul>
+        <a href=""><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a>
+        <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+        <li><i class="fa fa-github" aria-hidden="true"></i></li>
+        <li><i class="fa fa-codepen" aria-hidden="true"></i></li>
+      </ul>
+    </div>
     </section>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -65,6 +95,7 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/uikit.min.js"></script>
     <!-- endbuild -->
   </body>
 </html>

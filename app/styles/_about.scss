@@ -1,3 +1,19 @@
 .about{
-	height: 100vh;
+	position: relative;
+	padding: 10em 10%;
+	height: 70vh;
+	background-color: $brand;
+	text-align: center;
+	color: white;
+		&::before{
+			left: 50%;
+		    z-index: 10;
+		    width: 200px;
+		    height: 200px;
+		    border-radius: 50%;
+		    background: inherit;
+		    -webkit-transform: translateX(-50%);
+		    transform: translateX(-50%);
+		    top: -12%;	
+		}
 }

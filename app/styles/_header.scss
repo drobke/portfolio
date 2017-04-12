@@ -94,11 +94,12 @@ header{
     .scroll-down-btn {
             position: absolute;
             text-align: center;
-            bottom: 5%;
+            bottom: 1%;
             left: 50%;
             margin-left: -35px;
             width: 70px;
             height: 70px;
+            z-index: 15;
         .arrow {
             position: absolute;
             top: 0px;
@@ -119,6 +120,10 @@ header{
             -moz-animation: arrow .8s infinite;
             -ms-animation: arrow .8s infinite;
             -o-animation: arrow .8s infinite;
+          &:hover {
+            border-color: rgba(0, 0, 0, 0) #c2d4d8 #c2d4d8 rgba(0, 0, 0, 0);
+          }
         }
     }
 }
+
