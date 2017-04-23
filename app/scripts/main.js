@@ -1,80 +1,75 @@
-/*!
- * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
- * 
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
+$(document).ready(function () {
 
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
+    $('#moveDown').click(function () {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 0
+        }, 1200)
+        ;
+        event.preventDefault();
+        return false;
+    });
+    $('#moveUp').click(function () {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 0
+        }, 1200)
+        ;
+        event.preventDefault();
+        return false;
+    });
 
-( function( window ) {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var welcome = $('#welcome').height();
+        if (scroll >= welcome) {
+            $('nav').addClass('header-fixed', 600);
+        }
+        else {
+            $('nav').removeClass('header-fixed', 600);
+        }
+    });
 
-'use strict';
 
-// class helper functions from bonzo https://github.com/ded/bonzo
 
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
+    $(window).on('scroll', function () {
+        var logo = $('.logo');
+        var range = 300;
+        var scrollTop = $(this).scrollTop();
+        var offset = logo.offset().top;
+        var height = logo.outerHeight();
+        offset = offset + height / 2;
+        var calc = 1 - (scrollTop - offset + range) / range;
 
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
+        logo.css({ 'opacity': calc });
 
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
+        if ( calc > '1' ) {
+            logo.css({ 'opacity': 1 });
+        } else if ( calc < '0' ) {
+            logo.css({ 'opacity': 0 });
+        }
 
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
+    });
 
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
+    $('span.glyphicon-align-justify').click(function () {
+        event.preventDefault();
+        $('nav.mobile').show(300);
 
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else {
-  // browser global
-  window.classie = classie;
-}
 
-})( window );
+         $('span.glyphicon-align-justify').hide(300);
+    });
+
+    $('span.glyphicon-remove').click(function () {
+        event.preventDefault();
+        $('nav.mobile').hide(300);
+        $('span.glyphicon-align-justify').show(300);
+     });
+
+    $('nav.mobile a').click(function () {
+        event.preventDefault();
+        $('nav.mobile').hide(300);
+        $('span.glyphicon-align-justify').show(300);
+    });
+
+
+});
+
+particlesJS();

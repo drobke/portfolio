@@ -1,129 +1,44 @@
-header{
-	height: 100vh;
-	background-image: url('../images/wall.jpeg');
-	background-size: cover;
-  .navigation {
-    display:flex;
-    justify-content: center;
+.welcome{
+    display: flex;
     align-items: center;
-    a {
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../images/wall3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    #particles-js {
       position: relative;
-      display: inline-block;
-      margin: 15px 25px;
-      outline: none;
-      color: $brand-primary;
-      text-decoration: none;
-      letter-spacing: 1px;
-      font-size: 1.35em;
-      padding: 10px;
-      -webkit-transition: color 0.3s;
-      -moz-transition: color 0.3s;
-      transition: color 0.3s;
-      &:hover {
-        outline: none;
-        color: $brand-primary;
-        &::before {
-          opacity: 1;
-          -webkit-transform: translateY(0px);
-          -moz-transform: translateY(0px);
-          transform: translateY(0px);
-        }
-        &::after {
-          opacity: 1;
-          -webkit-transform: translateY(0px);
-          -moz-transform: translateY(0px);
-          transform: translateY(0px);
-        }
-      }
-      &:focus {
-        outline: none;
-        color: $brand-primary;
-        &::before {
-          opacity: 1;
-          -webkit-transform: translateY(0px);
-          -moz-transform: translateY(0px);
-          transform: translateY(0px);
-        }
-        &::after {
-          opacity: 1;
-          -webkit-transform: translateY(0px);
-          -moz-transform: translateY(0px);
-          transform: translateY(0px);
-        }
-      }
-      &::before {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        content: '';
-        opacity: 0;
-        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-        transition: opacity 0.3s, transform 0.3s;
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        transform: translateY(-10px);
-        top: 0;
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        transform: translateY(-10px);
-      } 
-      &::after {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        content: '';
-        opacity: 0;
-        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-        transition: opacity 0.3s, transform 0.3s;
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        transform: translateY(-10px);
-        bottom: 0;
-        -webkit-transform: translateY(10px);
-        -moz-transform: translateY(10px);
-        transform: translateY(10px);
-      }
+      z-index: 11;
+      height: 100vh;
     }
-  }
-    .scroll-down-btn {
-            position: absolute;
-            text-align: center;
-            bottom: 1%;
-            left: 50%;
-            margin-left: -35px;
-            width: 70px;
-            height: 70px;
-            z-index: 15;
-        .arrow {
-            position: absolute;
-            top: 0px;
-            left: 50%;
-            margin-left: -25px;
-            width: 50px;
-            height: 50px;
-            border-style: solid;
-            border-width: thin;
-            border-color: rgba(0, 0, 0, 0) #fff #fff rgba(0, 0, 0, 0);
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            animation: arrow .8s infinite;
-            -webkit-animation: arrow .8s infinite;
-            -moz-animation: arrow .8s infinite;
-            -ms-animation: arrow .8s infinite;
-            -o-animation: arrow .8s infinite;
-          &:hover {
-            border-color: rgba(0, 0, 0, 0) #c2d4d8 #c2d4d8 rgba(0, 0, 0, 0);
-          }
+    .profile{
+      background-image: url(../images/nenad.jpg);
+      background-size: cover;
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      border: 8px solid rgba(250,250,250,0.4);
+      position: absolute;
+      top: 35%;
+      left: 15%;
+      transition: 1.5s;
+        &:hover{
+          border: 8px solid rgba(0,0,0,0.9);
+          transition: 1.5s;
         }
     }
+    .statement{
+      height: 220px;
+      width: 350px;
+      -webkit-clip-path: polygon(11% 0, 100% 0%, 100% 75%, 13% 73%, 12% 46%, 0 36%, 12% 32%);
+      clip-path: polygon(11% 0, 100% 0%, 100% 75%, 13% 75%, 11% 46%, 0 36%, 12% 32%);
+      background-color: rgba(250, 250, 250, 0.5);
+      display: flex;
+      justify-content: center;
+      animation-delay: 2s;
+      p{
+        width:50%;
+      }
+    }
+  
 }
-

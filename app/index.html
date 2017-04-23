@@ -16,8 +16,10 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/uikit.min.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/animate.css">
+<!--     <link rel="stylesheet" href="styles/uikit.min.css">
+ -->    
+ <!-- endbuild -->
     <!--fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,51 +33,33 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+    <section class="welcome">
+    <div id='particles.js'></div>
     <header>
+      <div class="wrap">
+        <a class="hamburger" href="">
+          <button>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        </a>
         <nav class="navigation">
-          <a href="#">about me</a>
-          <a href="#">skills</a>
-          <a href="#">portfolio</a>
-          <a href="#">contact</a>
-        </nav>  
-        <div id="sec01">
-       <div class="scroll-down-btn">
-        <a href="#about"><div class="arrow"></div></a>
-       </div>
-     </div>
-    </header>
-
-    <section class="about" id="about">
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At amet aspernatur, laboriosam aliquam et cupiditate ut eaque quos! Quasi possimus odit accusantium, sunt nobis, deleniti labore voluptatibus. Neque facilis, recusandae suscipit magni voluptatum nihil architecto in optio laboriosam quo veniam quia quaerat, ad enim ipsum asperiores eos dolor alias reiciendis minima commodi, obcaecati quae. Quas soluta et accusantium veritatis ullam possimus aperiam molestiae labore deserunt doloremque, rerum accusamus tenetur placeat doloribus consectetur deleniti cupiditate fuga, delectus vitae excepturi eligendi temporibus architecto? Praesentium assumenda, beatae, voluptate a rerum, consectetur cumque quisquam amet placeat obcaecati animi corporis fugit tempore natus nobis commodi neque unde numquam temporibus provident ab ea ratione architecto. Corporis neque minus autem officia dicta, quidem cum eum aliquam rem sapiente quo nemo obcaecati harum illo magni. Blanditiis voluptates praesentium, est commodi delectus ratione quasi sequi excepturi deserunt molestiae porro illo ad velit quidem expedita nam eveniet obcaecati eius, ea, rem voluptatem similique pariatur maxime cupiditate. Debitis voluptas corporis eius, magni consectetur dolor nobis accusamus iure voluptatibus necessitatibus, aut modi provident non labore aperiam eveniet nemo laborum. Odio quam delectus, obcaecati corrupti, illum voluptate quidem culpa aspernatur alias est iste dolores esse. Magnam mollitia consequatur, adipisci temporibus nobis harum. Voluptate!</div>
-    </section>
-    <section class="contact">
-    <section class="work">
-      <!-- Filter Controls -->
-      <ul id="my-id" class="uk-subnav">
-          <li data-uk-filter=""><a href=""></a></li>
-          <li data-uk-filter="filter-a"><a href=""></a></li>
-          <li data-uk-filter="filter-b"><a href=""></a></li>
-      </ul>
-
-      <!-- Dynamic Grid -->
-      <div data-uk-grid="{controls: '#my-id'}">
-          <div data-uk-filter="filter-a">...</div>
-          <div data-uk-filter="filter-b">...</div>
-          <div data-uk-filter="filter-a,filter-b">...</div>
+          <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+        </nav> 
       </div>
+        <div class="profile animated zoomIn"></div> 
+        <div class="statement animated zoomIn">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dicta, porro dolorum, quidem recusandae sequi molestiae nihil quis similique dolor.</p>
+        </div>
+    </header>
     </section>
-    <div class="social">
-      <ul>
-        <a href=""><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a>
-        <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-        <li><i class="fa fa-github" aria-hidden="true"></i></li>
-        <li><i class="fa fa-codepen" aria-hidden="true"></i></li>
-      </ul>
-    </div>
+    <section class="content">
+      <div></div>
     </section>
+
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -85,14 +69,15 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+    <!--node modules-->
+    <!--end of node modules-->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="scripts/uikit.min.js"></script>
