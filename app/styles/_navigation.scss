@@ -6,6 +6,7 @@
 	height: 100%;
 	width: 30px;
 	transition: 0.5s;
+	z-index: 5;
 	&:hover{
 		width: 120px;
 		transition: 0.5s;
@@ -16,7 +17,7 @@
 		align-items: center;
 		height: 5%;
 		button{
-			background-color: rgba(0,0,0,0.1);
+			background-color: Transparent;
 			border: 0px;
 			cursor:pointer;
 			i{

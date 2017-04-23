@@ -13,7 +13,7 @@ particlesJS("particles-js", {
       "value": "#ffffff"
     },
     "shape": {
-      "type": "circle",
+      "type": "triangle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -74,7 +74,7 @@ particlesJS("particles-js", {
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "buble"
+        "mode": "pulse"
       },
       "onclick": {
         "enable": true,
@@ -111,97 +111,4 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-
-/* ---- stats.js config ---- */
-
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function() {
-  stats.begin();
-  stats.end();
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  }
-  requestAnimationFrame(update);
-};
-requestAnimationFrame(update);
-
-$(document).ready(function () {
-    $('#moveDown').click(function () {
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - 0
-        }, 1200)
-        ;
-        event.preventDefault();
-        return false;
-    });
-    $('#moveUp').click(function () {
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - 0
-        }, 1200)
-        ;
-        event.preventDefault();
-        return false;
-    });
-
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        var welcome = $('#welcome').height();
-        if (scroll >= welcome) {
-            $('nav').addClass('header-fixed', 600);
-        }
-        else {
-            $('nav').removeClass('header-fixed', 600);
-        }
-    });
-
-
-
-    $(window).on('scroll', function () {
-        var logo = $('.profile');
-        var range = 300;
-        var scrollTop = $(this).scrollTop();
-        var offset = profile.offset().top;
-        var height = profile.outerHeight();
-        offset = offset + height / 2;
-        var calc = 1 - (scrollTop - offset + range) / range;
-
-        profile.css({ 'opacity': calc });
-
-        if ( calc > '1' ) {
-            profile.css({ 'opacity': 1 });
-        } else if ( calc < '0' ) {
-            profile.css({ 'opacity': 0 });
-        }
-
-    });
-
-    $('span.glyphicon-align-justify').click(function () {
-        event.preventDefault();
-        $('nav.mobile').show(300);
-
-
-         $('span.glyphicon-align-justify').hide(300);
-    });
-
-    $('span.glyphicon-remove').click(function () {
-        event.preventDefault();
-        $('nav.mobile').hide(300);
-        $('span.glyphicon-align-justify').show(300);
-     });
-
-    $('nav.mobile a').click(function () {
-        event.preventDefault();
-        $('nav.mobile').hide(300);
-        $('span.glyphicon-align-justify').show(300);
-    });
-
-
-});
-
+new WOW().init();
