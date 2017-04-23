@@ -7,9 +7,9 @@
     background-size: cover;
     background-attachment: fixed;
     #particles-js {
-      position: relative;
-      z-index: 11;
-      height: 100vh;
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
     .profile{
       background-image: url(../images/nenad.jpg);
