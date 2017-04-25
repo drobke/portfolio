@@ -3,17 +3,17 @@
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 20,
+      "value": 50,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#fff"
     },
     "shape": {
-      "type": "triangle",
+      "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -48,7 +48,7 @@ particlesJS("particles-js", {
       }
     },
     "line_linked": {
-      "enable": false,
+      "enable": true,
       "distance": 150,
       "color": "#ffffff",
       "opacity": 0.4,
@@ -74,7 +74,7 @@ particlesJS("particles-js", {
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "pulse"
+        "mode": "grab"
       },
       "onclick": {
         "enable": true,
@@ -112,3 +112,65 @@ particlesJS("particles-js", {
 });
 
 new WOW().init();
+
+(function() // Code in a function to create an isolate scope
+{
+var speed = 500;
+var moving_frequency = 15; // Affects performance !
+var links = document.getElementsByTagName('a');
+var href;
+for(var i=0; i<links.length; i++)
+{   
+    href = (links[i].attributes.href === undefined) ? null : links[i].attributes.href.nodeValue.toString();
+    if(href !== null && href.length > 1 && href.substr(0, 1) == '#')
+    {
+        links[i].onclick = function()
+        {
+            var element;
+            var href = this.attributes.href.nodeValue.toString();
+            if(element = document.getElementById(href.substr(1)))
+            {
+                var hop_count = speed/moving_frequency
+                var getScrollTopDocumentAtBegin = getScrollTopDocument();
+                var gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin) / hop_count;
+
+                for(var i = 1; i <= hop_count; i++)
+                {
+                    (function()
+                    {
+                        var hop_top_position = gap*i;
+                        setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+                    })();
+                }
+            }
+
+            return false;
+        };
+    }
+}
+
+var getScrollTopElement =  function (e)
+{
+    var top = 0;
+
+    while (e.offsetParent != undefined && e.offsetParent != null)
+    {
+        top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
+        e = e.offsetParent;
+    }
+
+    return top;
+};
+
+var getScrollTopDocument = function()
+{
+    return document.documentElement.scrollTop + document.body.scrollTop;
+};
+})();
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    Typed.new('#typed', {
+      stringsElement: document.getElementById('typed-strings')
+    });
+});

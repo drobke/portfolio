@@ -18,7 +18,7 @@ $icon-font-path: '../fonts/';
 
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
 }
@@ -49,3 +49,5 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background:#194A59;
 }
+
+::selection { background-color:grey; color: #4652BB; }

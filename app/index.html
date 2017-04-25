@@ -21,7 +21,7 @@
  -->    
  <!-- endbuild -->
     <!--fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--end of fonts -->
     
@@ -33,12 +33,19 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!--Beggining of welcome section-->
-    <section class="welcome">
-    <img class="wow fadeInDown" data-wow-duration="4s" src="../images/light.png" alt="lights">
-    <!--div that creates layer of stars-->
-    <div id='particles-js'></div>
+    <!--Beggining of header -->
     <header>
+    <!--In welcome screen we have stars background and particles.js -->
+    <section class="welcome" id='particles-js'>
+    <!--This div insert background image over stars background to simulate interactive screen-->
+    <div class="appleSet">
+      <div class="screenText">
+        <div id="typed-strings">
+          <h3>Nenad Drobac - <span>front-end developer</span> and <span>designer</span></h3>
+        </div>
+        <span id="typed"></span>
+     </div>
+    </div>
     <!--navigation-->
       <div class="wrap">
         <a class="hamburger animated infinite jello" href="">
@@ -48,18 +55,15 @@
         </a>
         <!--bullets in the bottom-->
         <nav class="navigation">
-          <a href="#content"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+          <a href="#about"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
         </nav> 
       </div>
       <!--end of navigation-->
-      <!--Round section with profile photography-->
-        <div class="profile animated slideInLeft"></div> 
-      <!--Dialog box with statement-->
-    </header>
     </section>
+    </header>
     <!--End of welcome section-->
     <section class="about" id="about">
     <div class="textWrap wow slideInLeft">
@@ -67,17 +71,53 @@
     <p>I'm a <strong>Front-end developer</strong> and <strong>UX & UI Designer</strong> from Indjija, Serbia. I love CSS and JavaScript which along with other acronyms gives me superpower to develop compelling front-end, intuitive yet minimalistic interfaces, and engaging designs. I work to the principle that Simple is beautiful, while carefully including the finest details and interactions.</p>
     </div>
     <div class="iphone">
-      <img class="wow fadeInUp" src="../images/iphone.png" alt="iphone">
+      <img class="wow fadeInUp" src="../images/iphone.png" alt="iphone" >
       <a class="hire wow fadeInUp" href="">Hire me</a>
     </div>
     </section>
-    <div class="sectionBreaker wow fadeInUp">
-      
-    </div>
-    <section class="skills">
-      
-    </section>
 
+    <section class="skills">
+    <div class="skillsWrap">
+        <div class="web">
+        <div class="border"></div>
+        <i class="fa fa-laptop" aria-hidden="true"></i>
+          <div class="text">
+            <h3>Web design</h3>
+            <p>With the latest web technologies like HTML5 and CSS3, I create individual websites for all end devices</p>
+          </div>
+        </div>
+        <div class="web">
+        <div class="border"></div>
+          <i class="fa fa-camera" aria-hidden="true"></i>
+          <div class="text">
+          <h3>Photography</h3>
+            <p> In order to give the website authenticity, I pass for a personal photoshooting</p>
+          </div>
+        </div>
+        <div class="web"> 
+          <div class="border"></div>
+          <i class="fa fa-video-camera" aria-hidden="true"></i>
+          <div class="text">
+          <h3>Video</h3>
+            <p> Nothing presents your business better than a short corporate video on YouTube</p>
+          </div>
+        </div>
+        <div class="web">
+          <div class="border"></div>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <div class="text">
+          <h3>SEO</h3>
+            <p> Through numerous tricks in search engine optimization, I bring the website to the first page at Google</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="work">
+
+    </section>
+    <footer>
+      
+    </footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -93,6 +133,8 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/typed.js/js/typed.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
     <!--node modules-->

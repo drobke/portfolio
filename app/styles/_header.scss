@@ -1,33 +1,55 @@
-.welcome{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 110vh;
-    background-image: url('../images/wall4.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    img{
-      width:100%;
-    }
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-    .profile{
-      background-image: url(../images/nenad.jpg);
+header{
+  height: 110vh;
+  .welcome{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       background-size: cover;
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      border: 8px solid rgba(250,250,250,0.4);
-      position: absolute;
-      top: 10%;
-      left: 7%;
-      transition: 1.5s;
-        &:hover{
-          border: 8px solid rgba(0,0,0,0.9);
-          transition: 1.5s;
+      background-image: url('../images/wall3.jpg');
+      background-attachment: fixed;
+      #particles-js {
+        position: absolute;
+        left: 491px;
+        top: 252px;
+        width: 570px;
+        height: 326px;
+      }
+    .appleSet{
+        position: absolute;
+        overflow-x: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/mainwall.png');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .screenText{
+          height: 250px;
+          width: 500px;
+          display: flex;
+          flex-direction: row;
+          #typed-strings{
+              h3{
+                color: white;
+                font-size: 24px;
+              }
+          }
+          #typed{
+            color:white;
+            font-size: 17px;
+          }
         }
-    }  
+    }
+  }
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
 }
