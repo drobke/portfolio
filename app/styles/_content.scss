@@ -178,6 +178,46 @@
 	}
 
 }
+	.project-reverse{
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+		.projectText{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 50%;
+			h4{
+
+			}
+			p{
+				width: 80%;
+			}
+		}
+		.projectPicture{
+			width: 50%;
+			img{
+				height:100%;
+				width: 100%;
+			}
+			iframe{
+				position: absolute;
+				width: 290px;
+				height: 180px;
+				top: 20%;
+				left:27%;
+			}
+		}
+		&:hover{
+			background-color: rgba(0,0,0,0.1);
+			transition: 0.5s;
+		}
+	}
+
+
 .hidden{ 
 	display: none;
 }

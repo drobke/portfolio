@@ -10,7 +10,7 @@ header{
           padding-top: 100px;
           height: 250px;
           width: 400px;
-          }
+        }
     }
   }
 }
@@ -182,7 +182,28 @@ header{
     }
     .projectPicture{
       width: 100%;
+      iframe{
+        width: 163px;
+        height: 100px;
+      }
     }
   }
+  .project-reverse{
+    flex-direction: column;
+    .projectText{
+      width: 100%;
+      p{
+        width: 80%;
+      }
+    }
+    .projectPicture{
+      width: 100%;
+      iframe{
+        width: 163px;
+        height: 100px;
+      }
+    }
+  }
+
 }
 }

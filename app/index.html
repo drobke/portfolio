@@ -35,7 +35,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!--Beggining of header -->
-    <header>
+    <header id="header">
     <!--In welcome screen we have stars background and particles.js -->
     <section class="welcome" id='particles-js'>
     <!--This div insert background image over stars background to simulate interactive screen-->
@@ -53,7 +53,7 @@
     <!--navigation-->
       <div class="wrap">
         <!--Burger menu icon on the right corner-->      
-        <a class="hamburger animated infinite jello" href="">
+        <a class="hamburger animated infinite jello" href="#header">
           <button>
             <i class="fa fa-bars" aria-hidden="true"></i>
           </button>
@@ -61,8 +61,8 @@
         <!--bullets in the bottom-->
         <nav class="navigation">
           <a href="#about"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+          <a href="#skills"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+          <a href="#work"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
         </nav> 
       </div>
@@ -83,7 +83,7 @@
     </div>
     </section>
     <!--Start of skills section -->
-    <section class="skills">
+    <section class="skills" id="skills">
     <div class="skillsWrap">
         <!--Web design-->
         <div class="web wow fadeInUp">
@@ -125,7 +125,7 @@
       </div>
     </section>
     <!--Beginining of projects section-->
-    <section class="work">
+    <section class="work" id="work">
     <h2>Projects</h2>
     <div class="filter">
       <div class="all hidden" data-filter="all" href="#" role="button"></div>
@@ -146,13 +146,13 @@
             </div>
           </div>
         <!--begining of project-->
-          <div class="project">
-            <div class="projectPicture wow slideInLeft">
-              <img src="../images/fluidcode.png" alt="Responsivan dizajn - fluid code">
-            </div>
+          <div class="project-reverse">
             <div class="projectText wow slideInRight">
               <h4>Fluid Code</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente non dolor saepe. Neque dolores necessitatibus accusamus corporis iure, sit reiciendis assumenda numquam vero. Quaerat eaque, natus blanditiis doloribus deserunt? Ut vitae dolores accusamus sapiente, quos neque iste odio similique facere, veniam molestias suscipit, molestiae nemo! Explicabo ducimus sequi dolores ea.</p>
+            </div>
+            <div class="projectPicture wow slideInLeft">
+              <img src="../images/fluidcode.png" alt="Responsivan dizajn - fluid code">
             </div>
           </div>
         <!--begining of project-->
