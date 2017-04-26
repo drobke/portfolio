@@ -1,5 +1,4 @@
 .wrap{
-	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	right: 0;
 	top:0;
@@ -7,10 +6,20 @@
 	width: 30px;
 	transition: 0.5s;
 	z-index: 5;
-	&:hover{
+	&:hover  {
+		background-color: rgba(12,47,69,0.7);
 		width: 120px;
 		transition: 0.5s;
+	&:hover .hamburger{
+		i{
+			color: white;
+		}
 	}
+	&:hover .navigation a{
+		color: white;
+	}
+	}
+
 	.hamburger{
 		display: flex;
 		justify-content: center;
@@ -21,13 +30,9 @@
 			border: 0px;
 			cursor:pointer;
 			i{
-				color: white;
+				color: #0c2f45;
 				margin: 10px;
 				transition: 0.5s;
-				&:hover{
-					color: blue;
-					transition: 0.5s;
-				}
 			}
 		}
 	}
@@ -35,18 +40,17 @@
 		height: 95%;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center;
 		a{
 			margin: 0 0 30px 0 ;
-			color: white;
+			color: #0c2f45;
 			transition: 0.5s;
 			.fa{
 				font-size: 16px;
-			}
-			&:hover{
-				color: blue;
-				transition: 0.5s;
+				&:hover{
+					color: #fff;
+				}
 			}
 		}
 	}
