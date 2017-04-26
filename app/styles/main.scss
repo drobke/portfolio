@@ -6,15 +6,9 @@ $icon-font-path: '../fonts/';
 @import "colors";
 @import "header";
 @import "animation";
-@import "about";
-@import "sections";
-@import "contact";
+@import "content";
 @import "navigation";
-
-
-
-  
-
+@import "queries";
 
 
 body {

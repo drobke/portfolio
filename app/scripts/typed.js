@@ -459,7 +459,7 @@
 		strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
 		stringsElement: null,
 		// typing speed
-		typeSpeed: 35,
+		typeSpeed: 95,
 		// time before typing starts
 		startDelay: 0,
 		// backspacing speed
