@@ -25,7 +25,7 @@
 
 ! function(window, document, $) {
 
-	"use strict";
+	'use strict';
 
 	var Typed = function(el, options) {
 		var self = this;
@@ -456,7 +456,7 @@
 	window.Typed = Typed;
 
 	var defaults = {
-		strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
+		strings: ['These are the default values...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],
 		stringsElement: null,
 		// typing speed
 		typeSpeed: 95,
@@ -479,7 +479,7 @@
 		// show cursor
 		showCursor: true,
 		// character for cursor
-		cursorChar: "|",
+		cursorChar: '|',
 		// attribute to type (null == text)
 		attr: null,
 		// either html or text
